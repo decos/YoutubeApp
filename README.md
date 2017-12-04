@@ -26,3 +26,58 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## INICIO DEL PROYECTO - YoutubeApp
+
+	Recursos:
+		- https://developers.google.com/youtube/v3/docs/
+		- https://console.developers.google.com/cloud-resource-manager
+		- https://console.developers.google.com/apis/dashboard?project=youtube-app-188012
+		- https://console.developers.google.com/apis/credentials/key/185?project=youtube-app-188012
+
+1. Crear el proyecto
+	- ng new youtubeapp
+
+2. Ingresar al primer recurso y hacer clic en la opción `Consola de API`
+	- Se abrira el segundo recurso
+
+3. Hacer clic en `Crear Proyecto` 
+	- Ingresar el nombre del nuevo proyecto `Youtube-App`
+	- Hacer clic en el boton `Crear`
+
+4. Dirigirse al tercer recurso haciendo clic en `Google APIs`
+
+5. Hacer clic en la opción `Biblioteca`
+ 	- Filtrar por `Youtube`
+	- Seleccionar la opción `Youtube Data API v3`
+	- Hacer clic en `Habilitar`
+
+5. Hacer clic en la opción `Credenciales`
+	- Hacer clic en el botón `Crear Credenciales`
+	- Hacer clic en la opción `Clave de API` 
+	- Guardar la clave de API: AIzaSyAtedwHHBW7t6ywRgj3VE_wjA_sk52rXuQ
+
+6. Dirigirse al tercer recurso haciendo clic en `Restringir Clave`
+	- Ingresar un nombre `Youtube-App`
+	- Seleccionar la opción `URL de referencia HTTP(sitios web)`
+	- Ingresar la URL de referencia `http://localhost:4200`
+	- Hacer clic en el boton `Guardar`
+
+7. Instalar Bootstrap en el proyecto `index.html`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

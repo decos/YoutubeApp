@@ -65,8 +65,30 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 7. Instalar Bootstrap en el proyecto `index.html`
 
+## COMPONENTES DE LA APLICACIÓN DE YOUTUBE
 
+	Recursos:
+		- https://getbootstrap.com/docs/4.0/components/navbar/#brand
 
+1. Crear los siguientes directorios: `components`, `services` y `pipes`
+
+2. Crear el componente `home` 
+	- ng g c components/home -is
+
+3. Crear el componente `navbar`
+	- ng g c components/navbar -is
+
+4. Crear un servicio
+	- ng g s services/youtube
+
+5. Importar el servicio al modulo y añadirlo en providers
+
+6. Añadir el navbar del primer recurso en la vista del componente `navbar`
+	- Añadir el selector del componente `navbar` en la vista principal
+
+7. Añadir el selector del componente `home` en la vista principal
+
+8. Añadir un nuevo estilo (clase) al fichero `styles.css`
 
 
 

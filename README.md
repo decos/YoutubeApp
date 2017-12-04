@@ -55,7 +55,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 5. Hacer clic en la opción `Credenciales`
 	- Hacer clic en el botón `Crear Credenciales`
 	- Hacer clic en la opción `Clave de API` 
-	- Guardar la clave de API: AIzaSyAtedwHHBW7t6ywRgj3VE_wjA_sk52rXuQ
+	- Guardar la clave de API: `AIzaSyAtedwHHBW7t6ywRgj3VE_wjA_sk52rXuQ`
 
 6. Dirigirse al tercer recurso haciendo clic en `Restringir Clave`
 	- Ingresar un nombre `Youtube-App`
@@ -90,7 +90,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 8. Añadir un nuevo estilo (clase) al fichero `styles.css`
 
+## OBTENER LA LISTA DE REPRODUCCIÓN 'UPLOADS'
 
+	Recursos:
+		- https://developers.google.com/youtube/v3/docs/channels/list
+		- https://www.youtube.com/channel/UCfM5rGQDqT6U3OmEYD-QV2Q?view_as=subscriber
+		- https://developers.google.com/youtube/v3/docs/playlists/list
+
+1. Ingresar al primer recurso, probar el API ingresando los siguientes datos:
+	- `part` : `contentDetails`
+	- `id` : `UCuaPTYj15JSkETGnEseaFFg` (Segundo Recurso)
+	- Hacer clic en el boton `Execute`
+	- Copiar el atributo `uploads` del resultado : `UUuaPTYj15JSkETGnEseaFFg`
+
+2. Ingresar al tercer resurso, probar el API ingresando los siguientes datos:
+	- `part` : `snippet`
+	- `maxResults` : `10`
+	- `playlistId` : `UUuaPTYj15JSkETGnEseaFFg`
 
 
 

@@ -90,25 +90,45 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 8. Añadir un nuevo estilo (clase) al fichero `styles.css`
 
-## OBTENER LA LISTA DE REPRODUCCIÓN 'UPLOADS'
+## OBTENER LA LISTA DE REPRODUCCIÓN 'UPLOADS' (FAVORITOS)
 
 	Recursos:
 		- https://developers.google.com/youtube/v3/docs/channels/list
-		- https://www.youtube.com/channel/UCfM5rGQDqT6U3OmEYD-QV2Q?view_as=subscriber
-		- https://developers.google.com/youtube/v3/docs/playlists/list
+		- https://www.youtube.com/user/diego2106/playlists
+		- https://developers.google.com/youtube/v3/docs/playlistItems/list
 
 1. Ingresar al primer recurso, probar el API ingresando los siguientes datos:
 	- `part` : `contentDetails`
 	- `id` : `UCuaPTYj15JSkETGnEseaFFg` (Segundo Recurso)
 	- Hacer clic en el boton `Execute`
-	- Copiar el atributo `uploads` del resultado : `UUuaPTYj15JSkETGnEseaFFg`
+	- Copiar el atributo `uploads` del resultado : `LLfM5rGQDqT6U3OmEYD-QV2Q`
 
 2. Ingresar al tercer resurso, probar el API ingresando los siguientes datos:
 	- `part` : `snippet`
 	- `maxResults` : `10`
-	- `playlistId` : `UUuaPTYj15JSkETGnEseaFFg`
+	- `playlistId` : `LLfM5rGQDqT6U3OmEYD-QV2Q`
 
+3. Codear el servicio `youtube`
+	- Añadir las propiedades `youtubeUrl` y `apikey`
+	- Importar el modulo `HTTP` e inyectarlo en el constructor
 
+4. Importar el modulo `HttpModule` en el modulo principal y añadirlo en `imports`
+
+5. Importar el modulo `rxjs/Rx` en el servicio
+
+6. Importar el modulo `URLSearchParams` en el servicio
+
+7. Codear la funcion `getVideos` en el servicio
+
+8. Codear el componente `home`
+	- Importar el servicio `YoutubeService`
+	- Inyectar el servicio en el constructor
+	- LLamar a la funcion `getVideos` desde el constructor
+
+9. Observar que la consola imprime un objeto
+	- Guardar la propiedad `nextPageToken` : `CAoQAA`
+
+10. Extraer el snippet de cada `item` y almacenarlo en un arreglo llamado `video`
 
 
 

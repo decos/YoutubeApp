@@ -128,10 +128,31 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 9. Observar que la consola imprime un objeto
 	- Guardar la propiedad `nextPageToken` : `CAoQAA`
 
-10. Extraer el snippet de cada `item` y almacenarlo en un arreglo llamado `video`
+10. Extraer el snippet de cada `item` y almacenarlo en un arreglo llamado `videos`
 
+## CREAR LA INTERFAZ DE LOS VIDEOS DEL CANAL
 
+	Recursos: 
+		- https://getbootstrap.com/docs/4.0/components/card/#card-columns
+		- https://getbootstrap.com/docs/4.0/components/modal/#live-demo
+		- https://getbootstrap.com/docs/4.0/components/modal/#via-javascript
 
+1. Copiar el codigo de la primera tarjeta del primer recurso y pegarlo en la vista del componente `home`
+
+2. Codear la vista con el arreglo llamado `videos`
+	- Clase `btn-block` : El boton sera del ancho de la tarjeta
+	- `videos.length > 0` no se mostrara si no se tiene al menos un item el arreglo `videos`
+
+~~~
+Cuando la persona haga clic en el boton VER VIDEO, abrir el Modal
+~~~
+
+3. Codear la vista del componente `home`, añadir un modal (tercer recurso)
+	- Controlar la salida, eliminar lo sgte: `data-dismiss="modal"`
+
+4. Añadir los siguientes codigos al componente `home` para llamar al modal
+	- declare var $:any;
+	- $('#exampleModal').modal();
 
 
 

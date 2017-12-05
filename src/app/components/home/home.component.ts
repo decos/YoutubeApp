@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 //Import Service
 import { YoutubeService } from '../../services/youtube.service';
 
+declare var $:any;
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,6 +12,7 @@ import { YoutubeService } from '../../services/youtube.service';
 export class HomeComponent implements OnInit {
 
   videos:any[] = [];
+  videoSel:any;
 
   constructor( public _yts:YoutubeService ) {
 
@@ -21,6 +24,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  verVideo( video:any ){
+    this.videoSel = video;
+    console.log("videSel: " , this.videoSel);
+    $('#exampleModal').modal();
   }
 
 }

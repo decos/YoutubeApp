@@ -154,6 +154,49 @@ Cuando la persona haga clic en el boton VER VIDEO, abrir el Modal
 	- declare var $:any;
 	- $('#exampleModal').modal();
 
+## PIPE PARA PASAR EL PROBLEMA DE LA SEGURIDAD Y MÉTODO DE CARGAR MÁS VIDEOS
+	
+	Problemas:
+		- Si el usuario hace clic afuera del modal, el modal se cierra
+		- El video se sigue reproduciendo a pesar de que se cierra el modal
+
+1. Crear el directorio `pipes`
+
+2. Crear un pipe con el nombre `videoYoutube`
+
+3. Codear el Pipe creado
+	- Importar la clase `DomSanitizer` e inyectarla en el constructor
+	- Generar la URL del video
+
+4. Llamar al video en la vista del componente `home` de la siguiente forma
+	- [src]="videoSel.resourceId.videoId | videoYoutube"
+
+~~~
+El video se sigue reproduciendo a pesar de que se cierra el modal
+~~~
+	
+5. Añadir la propiedad `clic` al boton `Cerrar Modal`
+	- Codear la funcion `cerrarModal()` en el componente `home`
+
+~~~
+Añadir el boton 'Cargar más videos'
+~~~
+
+6. Añadir la propiedad `clic` al boton `Cargar más videos`
+	- Codear la funcion `cargarMas()` en el componente `home`
+
+7. Modificar el codigo de la funcion `getVideos` en el servicio para que envie el `pageToken` si existe
+ 
+~~~
+Si el usuario hace clic afuera del modal, el modal se cierra
+~~~
+
+8. Añadir al modal las siguientes propiedades y valores:
+	- data-backdrop="static"
+ 	- data-keyboard="false"
+
+
+
 
 
 

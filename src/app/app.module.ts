@@ -9,12 +9,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { YoutubeService } from './services/youtube.service';
 //Import HttpModule
 import { HttpModule } from '@angular/http';
+//Import Pipe
+import { VideoYoutubePipe } from './pipes/video-youtube.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    VideoYoutubePipe
   ],
   imports: [
     BrowserModule,
